@@ -40,6 +40,9 @@ digest = { version = "0.10", optional = true }
 hmac = { version = "0.12.1", optional = true }
 sha-1 = { version = "0.10", optional = true }
 
+# `hmac-sha256` feature
+hmac-sha256 = { version = "1.1.4", optional = true }
+
 # `rsa-sha1-06` feature
 rsa06 = { version = "0.6", optional = true, package = "rsa" }
 
@@ -58,7 +61,7 @@ getrandom = { version = "0.2", features = ["js"] }
 wasm-bindgen-test = "0.3"
 
 [features]
-default = ["derive", "hmac-sha1", "std"]
+default = ["derive", "hmac-sha1", "hmac-sha256", "std"]
 alloc = ["oauth-credentials/alloc"]
 derive = ["oauth1-request-derive"]
 hmac-sha1 = ["digest", "hmac", "sha-1"]

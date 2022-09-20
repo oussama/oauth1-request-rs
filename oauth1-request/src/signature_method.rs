@@ -12,7 +12,12 @@ doc_auto_cfg! {
     pub mod plaintext;
     #[cfg(feature = "rsa-sha1-06")]
     pub mod rsa_sha1_06;
+
+//    #[cfg(feature = "rsa-sha256")]
+
 }
+
+pub mod hmac_sha256;
 
 #[cfg(any(feature = "hmac-sha1", feature = "rsa-sha1-06"))]
 mod digest_common;
